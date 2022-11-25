@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.nav-wrapper{
+  padding: 0 2rem;
+}
+.main-content{
+  min-height:100vh
+}
+.preloader{
+  display: block;
+  margin: 0 auto;
+}
+.circle-clipper .circle{
+  border-width: 5px;
+}
+.preloader-wrapper.big{
+  width: 110px;
+  height: 110px;
+}
+#error-page{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  white-space: nowrap;
+}
