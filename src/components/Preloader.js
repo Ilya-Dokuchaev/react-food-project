@@ -1,6 +1,6 @@
 export function Preloader(){
     return(
-        <div className="preloader-wrapper preloader big active">
+        <div className="preloader-wrapper preloader big center-align active">
             <div className="spinner-layer spinner-green-only">
                 <div className="circle-clipper left">
                     <div className="circle"></div>
