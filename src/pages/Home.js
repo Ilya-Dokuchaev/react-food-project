@@ -2,19 +2,25 @@ import {useEffect, useState} from "react";
 import {getAllMealCategories} from "../api";
 import {Preloader} from "../components/Preloader";
 import {CategoryList} from "../components/CategoryList";
+import {Header} from "../components/Header";
+import {Footer} from "../components/Footer";
 
-export function Home(){
-    const [catalog,setCatalog] = useState([])
+export function Home() {
+    const [catalog, setCatalog] = useState([])
 
-    useEffect(()=>{
+    useEffect(() => {
         getAllMealCategories().then(data => {
             setCatalog(data.categories)
         })
-    },[])
+    }, [])
 
     return <>
-        {!catalog.length?<Preloader/>:(
-            <CategoryList catalog={catalog}/>
-        )}
+        <Header/>
+        <main className='main-content container'>
+            {!catalog.length ? <Preloader/> : (
+                <CategoryList catalog={catalog}/>
+            )}
+        </main>
+        <Footer/>
     </>
 }

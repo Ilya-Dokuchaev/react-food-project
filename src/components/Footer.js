@@ -1,12 +1,13 @@
 import {Link} from "react-router-dom";
 
 export const Footer = () => {
-    return(
+    return (
         <footer className="page-footer  green lighten-1">
             <div className="container">
                 <div className="row">
                     <div className="col l6 s12">
-                        <p className="grey-text text-lighten-5">You can find more of my projects at Git-Hub. <br/>Feel free to contact me if you want to</p>
+                        <p className="grey-text text-lighten-5">You can find more of my projects at Git-Hub. <br/>Feel
+                            free to contact me if you want to</p>
                     </div>
                     <div className="col l4 offset-l2 s12">
                         <h5 id='contacts' className="white-text">Contacts</h5>
@@ -55,7 +56,8 @@ export const Footer = () => {
             <div className="footer-copyright">
                 <div className="container">
                     Copyright © {new Date().getFullYear()} ILDOK. All rights reserved.
-                    <a target='_blank' className="grey-text repo text-lighten-4 right" href="https://github.com/Ilya-Dokuchaev/react-food-project">Repo</a>
+                    <a target='_blank' rel={'noreferrer noopener'} className="grey-text repo text-lighten-4 right"
+                       href="https://github.com/Ilya-Dokuchaev/react-food-project">Repo</a>
                 </div>
             </div>
         </footer>
