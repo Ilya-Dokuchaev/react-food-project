@@ -19,13 +19,12 @@ export function Category() {
 
     useEffect(() => {
         getfilterByCategory(name).then((data) => setMeals(data.meals)).catch(console.error)
-        getAllMealCategories(name).then((data)=>setCatalog(data.categories.filter(el => el.strCategory===name))).catch(console.error)
+        getAllMealCategories(name).then((data) => setCatalog(data.categories.filter(el => el.strCategory === name))).catch(console.error)
     }, [name])
-
     return <>
         <Header/>
         <section className='main-content container'>
-            {!meals.length ? <Preloader/> : <MealList meals={meals} {...catalog[0]} />}
+            {!meals.length ? <Preloader/> : <MealList meals={meals} {...catalog[0]}/>}
         </section>
         <Footer/>
     </>

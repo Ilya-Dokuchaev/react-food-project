@@ -7,11 +7,7 @@ export function CategoryItem(props) {
         strCategoryThumb: imgCt,
         strCategoryDescription: descCt,
     } = props
-
-    const filteredDesc = descCt
-        .split('')
-        // eslint-disable-next-line
-        .filter(char => /[^[\[0-9\]/]/.test(char))
+    const filteredDesc = descCt.replace(/\[[^]]*\]/g, '')
         .slice(0, 120)
 
     return <>
@@ -20,7 +16,7 @@ export function CategoryItem(props) {
                 <div className="card-image">
                     <img src={imgCt} alt={nameCt}/>
                 </div>
-                <div className="card-content ">
+                <div className="content-category">
                     <span className="card-title bold">{nameCt}</span>
                     <p>{filteredDesc}...</p>
                     <button className="
@@ -32,6 +28,7 @@ export function CategoryItem(props) {
                         waves-light
                         btn-small">Find more about
                     </button>
+
                 </div>
             </div>
         </Link>

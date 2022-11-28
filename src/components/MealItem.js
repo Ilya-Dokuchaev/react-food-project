@@ -19,8 +19,8 @@ export function MealItem(props) {
                 </button>
                 <img src={strMealThumb} alt={strMeal}/>
             </div>
-            <div className="card-content ">
-                <span className="card-title bold">{strMeal}</span>
+            <div className="card-content center-align  ">
+                <span className="card-title card-title-meal bold">{strMeal}</span>
             </div>
         </div>
     </Link>

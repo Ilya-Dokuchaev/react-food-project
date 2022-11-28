@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import { createBrowserRouter, RouterProvider,} from "react-router-dom";
 import {Home} from "./pages/Home";
 import ErrorPage from "./pages/error-page";
 import { Recipe} from "./pages/Recepie";
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         path:'/recipe/:id',
         element:<Recipe/>,
     }
-])
+],{basename:'/react-food-project'})
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
